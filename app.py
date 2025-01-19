@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
-from streamlit_extras.let_it_rain import rain  # Adds falling emojis
+from streamlit_extras.let_it_rain import rain  
 
 # Load the trained model and label encoders
 with open("gift_recommendation_model.pkl", "rb") as model_file:
@@ -10,7 +10,7 @@ with open("gift_recommendation_model.pkl", "rb") as model_file:
 with open("label_encoders.pkl", "rb") as le_file:
     label_encoders = pickle.load(le_file)
 
-# Custom CSS for styling
+# styling
 st.markdown("""
 <style>
     body {
@@ -104,21 +104,21 @@ for i, question in enumerate(questions):
     answer = form.selectbox(f"**{question}**", options=optionsMap[i])
     answers.append(answer)
 
-# Add a submit button
+#  submit button
 submitted = form.form_submit_button("🎯 Get Gift Recommendation")
 
-# Prepare the input data
+
 if submitted:
     input_data = pd.DataFrame({f'Q{i+1}': [answer] for i, answer in enumerate(answers)})
     
-    # Encode input data
+    # encode 
     for column in input_data.columns:
         input_data[column] = label_encoders[column].transform(input_data[column])
 
-    # Predict the gift category
+    # Predict the gift \
     prediction = model.predict(input_data)
     gift_category = label_encoders['Gift Category'].inverse_transform(prediction)
 
-    # Display the recommended gift category with celebration
+    # Displays the recommended gift category with celebration
     st.success(f"🎁 Recommended gift category: **{gift_category[0]}** 🎉")
     st.balloons()  # Animation for success
