@@ -33,7 +33,7 @@ st.markdown("""
 rain(
     emoji="🎁",
     font_size=20,
-    falling_speed=7,
+    falling_speed=3,
     animation_length="10s",
 )
 
@@ -127,6 +127,6 @@ if submitted:
     emoji="❤️",
     font_size=20,
     falling_speed=7,
-    animation_length="5s",
+    animation_length="10s",
 )
 
