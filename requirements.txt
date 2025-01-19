@@ -1,5 +1,5 @@
 streamlit==1.25.0
-pandas
-numpy
-matplotlib
-streamlit-extras
+pandas==1.5.3
+numpy==1.24.2
+matplotlib==3.7.1
+streamlit-extras==0.1.2
