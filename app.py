@@ -36,6 +36,13 @@ rain(
     falling_speed=7,
     animation_length="infinite",
 )
+rain(
+    emoji="❤️",
+    font_size=20,
+    falling_speed=7,
+    animation_length="5",
+)
+
 
 # Streamlit app title with emojis
 st.title("🎉 Gift Recommendation App 🎁")
