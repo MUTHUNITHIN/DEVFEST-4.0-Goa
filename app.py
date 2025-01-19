@@ -32,8 +32,8 @@ st.markdown("""
 # Add animation at the top
 rain(
     emoji="🎁",
-    font_size=54,
-    falling_speed=5,
+    font_size=40,
+    falling_speed=4,
     animation_length="infinite",
 )
 
