@@ -34,13 +34,7 @@ rain(
     emoji="🎁",
     font_size=20,
     falling_speed=7,
-    animation_length="infinite",
-)
-rain(
-    emoji="❤️",
-    font_size=20,
-    falling_speed=7,
-    animation_length="5s",
+    animation_length="10s",
 )
 
 
@@ -129,3 +123,10 @@ if submitted:
     # Displays the recommended gift category with celebration
     st.success(f"🎁 Recommended gift category: **{gift_category[0]}** 🎉")
     st.balloons()  # Animation for success
+    rain(
+    emoji="❤️",
+    font_size=20,
+    falling_speed=7,
+    animation_length="5s",
+)
+
