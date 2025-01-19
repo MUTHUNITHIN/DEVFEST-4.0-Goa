@@ -40,7 +40,7 @@ rain(
     emoji="❤️",
     font_size=20,
     falling_speed=7,
-    animation_length="5",
+    animation_length="5s",
 )
 
 
